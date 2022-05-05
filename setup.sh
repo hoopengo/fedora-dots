@@ -18,7 +18,6 @@ mkdir ~/.config/fish
 sudo cp .config/config.fish ~/.config/fish/config.fish
 
 fish
-fish_config prompt choose pythonista
 
 # add flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
