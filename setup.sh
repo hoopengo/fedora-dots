@@ -13,7 +13,8 @@ neofetch
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # add fish shell
-sudo chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish $USER
+mkdir ~/.config/fish
 sudo cp .config/config.fish ~/.config/fish/config.fish
 
 fish
