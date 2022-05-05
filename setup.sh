@@ -1,6 +1,6 @@
 # check for all updates
+sudo dnf update
 sudo yum update
-sudo dng update
 sudo dnf upgrade --refresh -y
 sudo dnf makecache --refresh
 
