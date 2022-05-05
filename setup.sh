@@ -4,6 +4,10 @@ sudo yum update
 sudo dnf upgrade --refresh -y
 sudo dnf makecache --refresh
 
+# add flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak update
+
 # install my most pkgs
 sudo dnf -y install fish z git curl gcc clang cmake python3 python3-pip fonts-powerline thunderbird wget gnome-tweaks dnf-plugins-core docker-ce docker-ce-cli containerd.io docker-compose-plugin blueman neofetch util-linux-user
 
@@ -22,10 +26,6 @@ mkdir ~/.config/fish
 sudo cp .config/config.fish ~/.config/fish/config.fish
 
 fish
-
-# add flatpak
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak update
 
 # Настройка fish шелла под ваш вкус
 fish_config
