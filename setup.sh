@@ -9,10 +9,6 @@ sudo dnf -y install fish z git curl gcc clang cmake python3 python3-pip thunderb
 
 neofetch
 
-# enable docker
-sudo systemctl start docker
-sudo systemctl enable docker
-
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
