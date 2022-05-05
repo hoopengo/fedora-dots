@@ -5,7 +5,11 @@ sudo dnf upgrade --refresh -y
 sudo dnf makecache --refresh
 
 # install my most pkgs
-sudo dnf -y install fish z git curl gcc clang cmake python3 python3-pip thunderbird wget gnome-tweaks dnf-plugins-core blueman neofetch util-linux-user
+sudo dnf -y install fish z git curl gcc clang cmake python3 python3-pip fonts-powerline thunderbird wget gnome-tweaks dnf-plugins-core docker-ce docker-ce-cli containerd.io docker-compose-plugin blueman neofetch util-linux-user
+
+# enable docker
+sudo systemctl start docker
+sudo systemctl enable docker
 
 neofetch
 
