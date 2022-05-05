@@ -7,3 +7,5 @@ sudo dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidi
 sudo dnf update -y
 
 flatpak install flathub com.leinardi.gwe
+
+sudo reboot
