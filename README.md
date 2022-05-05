@@ -9,3 +9,9 @@
 1. Установите [Ventoy](https://github.com/ventoy/Ventoy/releases)
 2. Запустите Ventoy и [создайте мультизагрузочную флешку](https://youtu.be/88RS7H0p8kQ)
 3. Скачайте [Fedora](https://getfedora.org/ru/workstation/download/) или [Nobara](https://nobaraproject.org/) (для игр, но если у вас nvidia, то ваша видеокарта должна быть свежей и поддерживать драйвера. Если это не так, то лучше не устанавливайте nobara)
+
+## Игры
+Запустите `sh games.sh`, после запустите steam и залогиньтесь. Дальше зайдите в ProtonUP-Qt и скачайте последнюю версию proton-ge. Также вы сможете скачать другие лаунчеры через lutris.
+
+- Если вы изменили местоположение библиотеки стим, чтобы он запускал игры добавьте путь до неё в flatseal. Для примера `~/games` или `/mnt/disk1/games` 
+<img src="sources/flatseal-steamfix.jpg" />
