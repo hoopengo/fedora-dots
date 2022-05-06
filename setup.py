@@ -16,7 +16,7 @@ if prompt('Выполнить первичную установку?'):
   if prompt('Перезагрузить устройство? Это поможет в устанении многих ошибок'):
     os.system('sudo reboot')
 else:
-  os.system('dnf update')
+  os.system('sudo dnf update')
 
 if prompt('Начать фиксить звук?'):
     os.system('sh alert-sound-fix.sh')
