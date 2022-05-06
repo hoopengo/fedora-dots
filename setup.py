@@ -2,7 +2,7 @@ import os
 
 def prompt(q: str) -> bool:
   match input(f'{q} (Y/n): ').lower():
-    case ["yes", "y", ""]:
+    case "yes" | "y" | "":
       print('Начинаем исполнение.')
       return True
     case _:
