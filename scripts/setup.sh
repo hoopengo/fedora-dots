@@ -25,7 +25,8 @@ sudo dnf -y install neovim \
                     blueman \
                     neofetch \
                     util-linux-user \
-                    lm_sensors
+                    lm_sensors \
+                    inxi
 
 sudo dnf config-manager \
     --add-repo \
