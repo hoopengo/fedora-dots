@@ -3,4 +3,5 @@ flatpak install -y com.mattjakeman.ExtensionManager com.github.unrud.VideoDownlo
 
 sudo ln -s /var/lib/snapd/snap /snap
 sudo snap refresh
-sudo snap install --classic code pycharm-community
+sudo snap install --classic code
+sudo snap install --classic pycharm-community
