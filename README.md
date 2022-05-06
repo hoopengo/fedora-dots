@@ -2,7 +2,23 @@
 
 > Привет, перед началом этого гайда хотел бы сказать, что я делал его под себя и вам он может не подходить. Не стоит следовать каждому пункту и устанавливать то софт который вам не нужен.
 
-| [Источник](https://vk.com/@plafonvk-fedorazero) | [Разметка дисков](https://vk.com/video-211011902_456239066) |
+**Источники:**
+<details>
+
+<!-- start -->
+ 1. [Fedora Linux 36 | ДЕТАЛЬНАЯ НАСТРОЙКА С НУЛЯ (2022) | Fedora Zero](https://vk.com/@plafonvk-fedorazero)
+ 2. [Fedora Zero](https://vk.com/@plafonvk-fedorazero)
+ 3. [Линукс софт на каждый день](https://youtu.be/SDhg_UF0NCI)
+ 4. [КАК НАЧАТЬ ИГРАТЬ НА ЛИНУКСЕ](https://youtu.be/Y53Ox2tmsLU)
+ 5. [DaVinci Resolve 17 на Fedora Linux 35](https://youtu.be/39_wWFBcP2E)
+ 6. [gamer station [on linux]](https://www.youtube.com/c/UbuntariumbyRedroot)
+ 7. [LINUX GAMING для новичков](https://youtu.be/BlbPb3QVjR8)
+ 8. [nstalling & Customizing The Fish Shell](https://youtu.be/wpinXVpL5-U)
+ 9. [My Fish shell workflow for coding](https://youtu.be/KKxhf50FIPI)
+ 10. [Creating Functions In The Fish Shell](https://youtu.be/ec1A3YGQY60)
+<!-- end -->
+  
+</details>
 
 ## Создание загрузочной флешки
 
@@ -29,6 +45,7 @@
 <img src="sources/sources.png" />
 
 ## Разметка диска
+[Видео](https://vk.com/video-211011902_456239066)
 Я решил вынести это в отдельный пункт, потому-что это самое важно.
 1. Для начала выбираем те диски, которые вы хотите использовать.
 
