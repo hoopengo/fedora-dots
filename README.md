@@ -6,9 +6,9 @@
 
 ## Создание загрузочной флешки
 
-1. Установите [Ventoy](https://github.com/ventoy/Ventoy/releases)
-2. Запустите Ventoy и [создайте мультизагрузочную флешку](https://youtu.be/88RS7H0p8kQ)
-3. Скачайте [Fedora](https://getfedora.org/ru/workstation/download/) или [Nobara](https://nobaraproject.org/) (для игр, но если у вас nvidia, то ваша видеокарта должна быть свежей и поддерживать драйвера. Если это не так, то лучше не устанавливайте nobara)
+1. Установливаем [Ventoy](https://github.com/ventoy/Ventoy/releases) или Fedora Media Writer. На крайняк [Rufus](https://rufus.ie/)
+2. Запустите Ventoy и [создайте мультизагрузочную флешку](https://youtu.be/88RS7H0p8kQ) или загрузите образ через другие программы.
+3. Скачайте [Fedora](https://getfedora.org/ru/workstation/download/) или [Nobara](https://nobaraproject.org/) (многое пофикшено, но я свовил достаточно багов чтобы отказаться от этого решения. Добавлю также, что некоторые пункты из этого гайда выполнять на Nobara не нужно! К примеру `nvidia.sh` и `games.sh`)
 
 ## Батарея
 Заходим в настройки батареи и выключаем всё что вас должно тревожить
