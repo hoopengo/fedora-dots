@@ -35,6 +35,9 @@ if prompt('Начать фиксить звук?'):
 if prompt('Пофиксить смену раскладки по ALT+SHIFT?'):
     os.system('sh keyboard-fix.sh')
 
+if prompt('Пофиксить скролл мыши? Он будет увеличен'):
+  os.system('sh scroll-fix.sh')
+
 if prompt('Установить драйвера NVIDIA? После, система сразу перезапустится'):
   os.system('sh nvidia.sh')
   
