@@ -13,6 +13,7 @@ set -g theme_hostname always
 alias g git
 alias cls clear
 alias md mkdir
+alias vim nvim
 
 command -qv nvim && alias vim nvim
 
