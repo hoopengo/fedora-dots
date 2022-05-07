@@ -1,5 +1,6 @@
 # check for all updates
-sudo dnf update --refresh -y
+sudo dnf update
+sudo dnf upgrade --refresh
 sudo dnf makecache --refresh
 
 # add flatpak
