@@ -10,6 +10,8 @@ art = '''_       __        ___        __    ___    _     ________     ____   __ 
 
 print(art)
 
+os.system('sudo dnf update')
+
 def prompt(q: str) -> bool:
 	match input(f'{q} (Y/n): ').lower():
 		case "yes" | "y" | "":
@@ -19,31 +21,23 @@ def prompt(q: str) -> bool:
 			print('Пропускаем этот пункт.')
 			return False
 
-	return False
+setup = {
+	'Начать фиксить звук?': ['sh scripts/alert-sound-fix.sh', 'sh scripts/sound-fix.sh'],
+	'Пофиксить смену раскладки по ALT+SHIFT?': ['sh scripts/keyboard-fix.sh'],
+	'Пофиксить скролл мыши? Он будет увеличен': ['sh scripts/scroll-fix.sh'],
+	'Установить драйвера NVIDIA? После, система сразу перезапустится': ['sh scripts/nvidia.sh'],
+	'Установить софт для игр?': ['sh scripts/games.sh'],
+	'Установить весь софт?': ['sh scripts/soft.sh']
+}
 
 if prompt('Выполнить первичную установку?'):
 	os.system('sh scripts/setup.sh')
-	if prompt('Перезагрузить устройство? Это поможет в устанении многих ошибок'):
+	if prompt('Перезагрузить устройство? Это поможет в устанении многих проблем'):
 		os.system('sudo reboot')
-else:
-	os.system('sudo dnf update')
 
+for key in setup:
+	vals = setup.get(key)
 
-if prompt('Начать фиксить звук?'):
-		os.system('sh scripts/alert-sound-fix.sh')
-		os.system('sh scripts/sound-fix.sh')
-
-if prompt('Пофиксить смену раскладки по ALT+SHIFT?'):
-		os.system('sh scripts/keyboard-fix.sh')
-
-if prompt('Пофиксить скролл мыши? Он будет увеличен'):
-  os.system('sh scripts/scroll-fix.sh')
-
-if prompt('Установить драйвера NVIDIA? После, система сразу перезапустится'):
-	os.system('sh scripts/nvidia.sh')
-	
-if prompt('Установить софт для игр?'):
-	os.system('sh scripts/games.sh')
-
-if prompt('Установить весь софт?'):
-	os.system('sh scripts/soft.sh')
+	if prompt(key):
+		for val in vals:
+			os.system(val)
