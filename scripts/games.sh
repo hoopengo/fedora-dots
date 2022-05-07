@@ -2,7 +2,7 @@ sudo dnf update
 sudo dnf upgrade --refresh
 flatpak update
 
-flatpak install flathub com.github.tchx84.Flatseal flathub net.davidotek.pupgui2
+flatpak install flathub net.davidotek.pupgui2
 
 sudo dnf install lutris steam-devices
 
