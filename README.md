@@ -183,7 +183,26 @@ Snap:
 
 ## Устанавливаем "плагины"
 Заходим в менеджер расширений gnome (Extension Manager), если нету, то скачайте:
-```flatpak install flathub com.mattjakeman.ExtensionManager```
+
+`flatpak install flathub com.mattjakeman.ExtensionManager`
+
+Расширения:
+1. [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+2. [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
+3. [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
+4. [Status area Horizontal Spacing](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
+5. [ArcMenu](https://extensions.gnome.org/extension/3628/arcmenu/) (Тут на выбор, это удобная вещь, но не для всех)
+
+Заходим в настройки arcmenu, Position выбираем right, включаем Show Activities Button. Также можете назначить свой hotkey и изменить много всего, тут уже на ваше усмотрение.
+
+## Настройки в gnome-tweaks
+Во вкладке Apperance(2) выбираем тему Adwaita-dark(5)
+
+Во вкладке Top Bar(6) в Clock выбираем все пункты (это позволит нам видить дату и секунды)
+
+Во вкладке Window Titlebars(7). Тыкаем на Maximize(4) и Minimize(5)
+
+Заходим в обычные настройки во вкладку Multitasking и выключаем Hot Corner (это первый пункт), чтобы ArcMenu работало удобнее.
 
 ## Батарея
 Заходим в настройки батареи и выключаем всё что вас должно тревожить
