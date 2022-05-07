@@ -7,6 +7,9 @@ sudo dnf makecache --refresh
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
 
+# add non-free soft
+sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # install my most pkgs
 sudo dnf -y install neovim \
                     htop \
