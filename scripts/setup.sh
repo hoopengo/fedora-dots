@@ -32,6 +32,7 @@ sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
 
+# install docker
 sudo dnf install -y docker-ce \
                     docker-ce-cli \
                     containerd.io \
@@ -40,7 +41,7 @@ sudo dnf install -y docker-ce \
 # detect sensors
 sudo sensors-detect
 
-# add to start
+# add to start docker & lm-sensors
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl start lm-sensors
@@ -54,10 +55,12 @@ neofetch
 # add fish shell
 sudo chsh -s /usr/bin/fish $USER
 
+# add fish config (.config/config.fish you can edit him)
 mkdir ~/.config/fish
 sudo cp .config/config.fish ~/.config/fish/config.fish
 
+# start fish
 fish
 
-# Настройка fish шелла под ваш вкус
+# setting up fish.
 fish_config browse
