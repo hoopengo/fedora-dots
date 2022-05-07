@@ -7,6 +7,9 @@ sudo dnf makecache --refresh
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak update
 
+# install flatseal
+flatpak install flathub com.github.tchx84.Flatseal
+
 # add non-free soft
 sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
