@@ -91,7 +91,7 @@
 ## Настройка `fstab`
 Тут нужно быть осторожнее. Делайте только если у вас ssd!
 Для начала делаем копию нашего fstab на всякий случай. `cp /etc/fstab ~/fstab-copy`
-Дальше нужно вставить строчку в наши субвалюмы `,defaults,noatime,discard=async`, после чего сохранить файл и прописать sudo reboot.
+Дальше открываем fstab: `sudo nano /etc/fstab` нужно вставить строчку в наши субвалюмы `,defaults,noatime,discard=async`, после чего сохранить файл и прописать sudo reboot.
 
 <img src="sources/fstab.jpg" />
 
