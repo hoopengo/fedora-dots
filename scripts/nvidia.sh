@@ -9,4 +9,6 @@ sudo dnf update -y
 
 flatpak install flathub com.leinardi.gwe
 
+echo "Драйвера установлены! Перезапуск системы.."
+
 sudo reboot
