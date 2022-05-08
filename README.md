@@ -16,6 +16,7 @@
  8. [nstalling & Customizing The Fish Shell](https://youtu.be/wpinXVpL5-U)
  9. [My Fish shell workflow for coding](https://youtu.be/KKxhf50FIPI)
  10. [Creating Functions In The Fish Shell](https://youtu.be/ec1A3YGQY60)
+ 11. [Install DaVinci Resolve in Linux (Ubuntu, Arch, and Fedora)](https://techhut.tv/how-to-install-davinci-resolve-in-linux-ubuntu-arch-and-fedora/)
 <!-- end -->
   
 </details>
@@ -207,3 +208,15 @@ Snap:
 Заходим в настройки батареи и выключаем всё что вас должно тревожить
 
 <img src="sources/battery-settings.png" />
+
+# Davinchi Resolve
+
+[href](https://drive.google.com/file/d/1jIaahhyufzlpEzoTSplfayifi6W7sKf6/view)
+
+Заходим в терминал, в директорию скачанного файла.
+```
+sudo chmod +x DaVinci_Resolve_17.4.1_Linux.run
+sudo ./DaVinci_Resolve_17.4.1_Linux.run
+```
+
+Готово!
