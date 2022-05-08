@@ -6,3 +6,5 @@ cp .config/.imwheelrc ~/.imwheelrc
 cp .config/imwheel.desktop ~/.config/autostart
 
 imwheel --kill
+
+echo "Фикс завершён!"
