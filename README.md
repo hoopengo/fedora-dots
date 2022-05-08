@@ -172,14 +172,14 @@ Flatpak:
 9. mpv
 10. dejadup (Backups)
 11. krita
-12. telegram
-13. onlyoffice
-14. discord
-15. chrome
+12. onlyoffice
+13. discord
+14. chrome
 
 Snap:
 1. vscode
 2. pycharm community.ed
+3. telegram
 
 ## Устанавливаем "плагины"
 Заходим в менеджер расширений gnome (Extension Manager), если нету, то скачайте:
