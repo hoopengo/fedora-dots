@@ -33,7 +33,8 @@ sudo dnf -y install neovim \
                     neofetch \
                     util-linux-user \
                     lm_sensors \
-                    inxi
+                    inxi \
+                    ffmpeg
 
 sudo dnf config-manager \
     --add-repo \
