@@ -173,13 +173,13 @@ Flatpak:
 10. dejadup (Backups)
 11. krita
 12. onlyoffice
-13. discord
-14. chrome
 
 Snap:
 1. vscode
 2. pycharm community.ed
 3. telegram
+4. chromium
+5. discord-canary
 
 ## Устанавливаем "плагины"
 Заходим в менеджер расширений gnome (Extension Manager), если нету, то скачайте:
