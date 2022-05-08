@@ -34,7 +34,8 @@ sudo dnf -y install neovim \
                     util-linux-user \
                     lm_sensors \
                     inxi \
-                    ffmpeg
+                    ffmpeg \
+                    snapd
 
 sudo dnf config-manager \
     --add-repo \
