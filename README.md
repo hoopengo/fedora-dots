@@ -183,8 +183,7 @@ Snap:
 1. vscode
 2. pycharm community.ed
 3. telegram
-4. chromium
-5. discord-canary
+4. discord-canary
 
 ## Устанавливаем "плагины"
 Заходим в менеджер расширений gnome (Extension Manager), если нету, то скачайте:
