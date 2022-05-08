@@ -6,6 +6,5 @@ sudo snap refresh
 sudo snap install --classic code
 sudo snap install --classic pycharm-community
 sudo snap install telegram-desktop
-sudo snap install chromium
 sudo snap install discord-canary
 echo "Весь софт установлен!"
