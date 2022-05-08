@@ -90,8 +90,10 @@
 
 ## Настройка `fstab`
 Тут нужно быть осторожнее. Делайте только если у вас ssd!
+
 Для начала делаем копию нашего fstab на всякий случай. `cp /etc/fstab ~/fstab-copy`
-Дальше открываем fstab: `sudo nano /etc/fstab` нужно вставить строчку в наши субвалюмы `,defaults,noatime,discard=async`, после чего сохранить файл и прописать sudo reboot.
+
+Дальше открываем fstab: `sudo nano /etc/fstab` нужно вставить строчку в наши субвалюмы `,defaults,noatime,discard=async`, после чего сохранить файл и прописать `sudo reboot`
 
 <img src="sources/fstab.jpg" />
 
@@ -113,7 +115,6 @@
 
 - Добавляем это:
 ```
-skip_if_unavailable=True
 fastestmirror=True
 max_parallel_downloads=10
 defaultyes=True
@@ -124,12 +125,16 @@ defaultyes=True
 sudo dnf autoremove
 sudo dnf clean all
 sudo dnf update
+```
+
+- И перезагружаем пк:
+```
 sudo reboot
 ```
 
-Копируем этот репозиторий `git clone https://github.com/hoopengo/fedora-startup.git` и устанавливаем python `sudo dnf install python`, проверяем версию `python -V`, должна быть **3.10^**.
+Копируем этот репозиторий `git clone https://github.com/hoopengo/fedora-startup.git`, проверяем версию питона `python -V`, должна быть **3.10^**.
 
-Запускаем скрипт `python setup.py` и начинаем начальную установку, вы сами можете зайти в файл (`scripts/setup.sh`) и отредактировать его, удалив или добавив что-то. После установки, вам будет предложено перезагрузить систему и дабы не возникало ошибок, лучше это сделать.
+Заходим в папочку `cd fedora-startup/`. Запускаем скрипт `python setup.py` и начинаем начальную установку, вы сами можете зайти в файл (`scripts/setup.sh`) и отредактировать его, удалив или добавив что-то. После установки, вам будет предложено перезагрузить систему и дабы не возникало ошибок, лучше это сделать.
 
 После перезапуска снова запускаем скрипт и отказываемся от первичной установки. 
 
