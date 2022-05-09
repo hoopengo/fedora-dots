@@ -14,6 +14,10 @@ alias g git
 alias cls clear
 alias md mkdir
 alias vim nvim
+alias "gst" "git status"
+alias "gcm" "git commit"
+alias "ga" "git add"
+alias "gpl" "git pull"
 
 command -qv nvim && alias vim nvim
 
