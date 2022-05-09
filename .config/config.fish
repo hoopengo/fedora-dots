@@ -18,6 +18,7 @@ alias "gst" "git status"
 alias "gcm" "git commit"
 alias "ga" "git add"
 alias "gpl" "git pull"
+alias "gps" "git push"
 
 command -qv nvim && alias vim nvim
 
