@@ -70,6 +70,3 @@ sudo cp .config/config.fish ~/.config/fish/config.fish
 
 # start fish
 fish
-
-# setting up fish.
-fish_config browse
