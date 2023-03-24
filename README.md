@@ -1,6 +1,6 @@
 <img src="images/header.png" style="max-width: 200px;" />
 
-```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
+```curl -sS https://raw.githubusercontent.com/hoopengo/fedora-dots/main/install.sh | sh```
 
 <details>
 <summary><b>Full installation</b></summary>
@@ -98,7 +98,7 @@ If the system does not start or enters "safe mode", then:
 8. The system will restart and should now be up and running.
 # Customization
 
-```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
+```curl -sS https://raw.githubusercontent.com/hoopengo/fedora-dots/main/install.sh | sh```
 
 1. Go to gnome-tweaks and set theme as [catppuccin-mocha](https://github.com/catppuccin/gtk/releases/).
 2. In Gnome Terminal, open Menu -> Preferences -> Profiles, and enable the profile for the theme you want.
