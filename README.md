@@ -1,226 +1,110 @@
-# FEDORA37 STARTING UP
+<img src="images/header.png" style="max-width: 200px;" />
 
-> Перед началом этого гайда хотел бы сказать, что я делал его под себя (python программиста) и вам он может не подходить. Не стоит следовать каждому пункту и устанавливать тот софт который вам не нужен. Зайдите в папку scripts и отредактируйте скрипты под себя. Спасибо!
+```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
 
-**Источники:**
 <details>
+<summary><b>Full installation</b></summary>
 
-<!-- start -->
- 1. [Fedora Linux 36 | ДЕТАЛЬНАЯ НАСТРОЙКА С НУЛЯ (2022) | Fedora Zero](https://vk.com/@plafonvk-fedorazero)
- 2. [Fedora Zero](https://vk.com/@plafonvk-fedorazero)
- 3. [Линукс софт на каждый день](https://youtu.be/SDhg_UF0NCI)
- 4. [КАК НАЧАТЬ ИГРАТЬ НА ЛИНУКСЕ](https://youtu.be/Y53Ox2tmsLU)
- 5. [DaVinci Resolve 17 на Fedora Linux 35](https://youtu.be/39_wWFBcP2E)
- 6. [gamer station [on linux]](https://www.youtube.com/c/UbuntariumbyRedroot)
- 7. [LINUX GAMING для новичков](https://youtu.be/BlbPb3QVjR8)
- 8. [nstalling & Customizing The Fish Shell](https://youtu.be/wpinXVpL5-U)
- 9. [My Fish shell workflow for coding](https://youtu.be/KKxhf50FIPI)
- 10. [Creating Functions In The Fish Shell](https://youtu.be/ec1A3YGQY60)
- 11. [Install DaVinci Resolve in Linux (Ubuntu, Arch, and Fedora)](https://techhut.tv/how-to-install-davinci-resolve-in-linux-ubuntu-arch-and-fedora/)
-<!-- end -->
-  
-</details>
+> Before you start reading this guide, I would like to say that I made it for myself (programmer) and it may not suit you. Do not follow every point and install the software that you do not need!
 
-## Создание загрузочной флешки
+## Creating a bootable flash drive
 
-1. Установливаем [Ventoy](https://github.com/ventoy/Ventoy/releases) или Fedora Media Writer. На крайняк [Rufus](https://rufus.ie/)
-2. Запустите Ventoy и [создайте мультизагрузочную флешку](https://youtu.be/88RS7H0p8kQ) или загрузите образ через другие программы.
-3. Скачайте [Fedora](https://getfedora.org/ru/workstation/download/) или [Nobara](https://nobaraproject.org/) (многое пофикшено, но я словил достаточно багов чтобы отказаться от этого решения.)
+1. Install [Ventoy](https://github.com/ventoy/Ventoy/releases) or Fedora Media Writer. To the extreme [Rufus](https://rufus.ie/)
+2. Run Ventoy and [create multiboot flash](https://youtu.be/88RS7H0p8kQ) or download the image via other programs.
+3. Download [Fedora](https://getfedora.org/ru/workstation/download/) or [Nobara](https://nobaraproject.org/) (much fixed, but I caught enough bugs to abandon this solution .)
 
-## Установка Fedora37
+## Installation
 
-Если есть пункт `Имя сети и узла`, и он горит ошибкой, то выбираем там ваш wifi-адаптер и подключаемся к сети.
+If there is an item `Network and host name`, and it lights up with an error, then select your wifi adapter there and connect to the network.
 
-<img src="sources/wifi.png" />
+<img src="images/wifi.png" />
 
-Если есть пункт `Источник установки`, выбираем ближайшее зеркало и нажимаем готово
+If there's an item `Install Source`, choose the nearest mirror and click done
 
-<img src="sources/sources.png" />
+<img src="images/sources.png" />
 
-Если у вас есть пункт `Выбор программ`, тогда выбираем там Fedora Workstation и нажимаем готово. 
+If you have the item `Select programs`, then choose Fedora Workstation there and click done.
 
-<img src="sources/progs-label.png" />
+<img src="images/progs-label.png" />
 
-Тут создаем root пользователя и своего личного. Ну или же можно дать root права вашему пользователю, для этого пропустите пункт `Учётная запись root` и убедитесь что стоит галочка на Выдать wheel права в пункте `Создание пользователя`
+This is where you create a root user and create your own user. Or you can give root rights to your user, to do that skip the item `Root account` and make sure you check the option `Give root rights` under the item `Create user
 
-<img src="sources/usr.png" />
+<img src="images/usr.png" />
 
-## Разметка диска
+## Disk Partitioning
+
 [Видео](https://vk.com/video-211011902_456239066)
 
-Я решил вынести это в отдельный пункт, потому-что это самое важно.
-1. Для начала выбираем те диски, которые вы хотите использовать.
+I decided to put this in a separate item because it's the most important thing.
 
-<img src="sources/disks.png" />
+1. First, choose the disks you want to use.
 
-2. Потом в способе разметки выбираем `Blivet-GUI`
+<img src="images/disks.png" />
 
-<img src="sources/blivet-gui.png" />
+2. Then in partitioning method choose `Blivet-GUI
 
-3. Удаляем все разделы с дисков.
-4. Создаём `efi` раздел. В файловой системе выбираем `Efi partition manager`
+<img src="images/blivet-gui.png" />
 
-<img src="sources/boot-efi.png" />
+3. Delete all partitions from disks.
+4. Create an `efi` partition. In the file system, select `Efi partition manager`
 
-5. Создаём `boot` раздел
+<img src="images/boot-efi.png" />
 
-<img src="sources/boot.png" />
+5. Create a `boot` partition
 
-6. Создаём `swap` на 8 гб (если не жалко) или на 5 гб (если жалко)
+<img src="images/boot.png" />
 
-<img src="sources/swap.png" />
+6. Create a `swap` for 8 GB (if you don't mind) or 5 GB (if you don't mind). I use 16GB btw.
 
-7. Для остального пространства размечаем btrfs без точки монтирования
+<img src="images/swap.png" />
 
-<img src="sources/btrfs.png" />
+7. For the rest of the space, mark up btrfs without a mount point
 
-8. Создаём субвалюмы в правильной последовательность
+<img src="images/btrfs.png" />
 
-<img src="sources/log.png" />
+8. Create sub-values ​​in the correct sequence
 
-<img src="sources/home.png" />
+<img src="images/log.png" />
 
-<img src="sources/dir.png" />
+<img src="images/home.png" />
 
-9. Проверяем их правильность.
+<img src="images/dir.png" />
 
-<img src="sources/all-btrfs.png" />
+9. We check their correctness.
 
-10. Если есть ещё диски, размечаем их `ext4` и в точке монтирования пишем `/mnt/{ваше_имя}`, для примера у меня стоит `/mnt/disk1`
+<img src="images/all-btrfs.png" />
 
-## Настройка `fstab`
-Тут нужно быть осторожнее. Делайте только если у вас ssd!
+10. If there are more disks, mark them with `ext4` and write `/mnt/{your_name}` at the mount point, for example I have `/mnt/TOSHIBA_1TB`
 
-Для начала делаем копию нашего fstab на всякий случай. `cp /etc/fstab ~/fstab-copy`
+# Customization
 
-Дальше открываем fstab: `sudo nano /etc/fstab` нужно вставить строчку в наши субвалюмы `,defaults,noatime,discard=async`, после чего сохранить файл и прописать `sudo reboot`
+```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
 
-<img src="sources/fstab.jpg" />
+1. Go to gnome-tweaks and set theme as [catppuccin-mocha](https://github.com/catppuccin/gtk/releases/).
+2. In Gnome Terminal, open Menu -> Profiles, and enable the profile for the theme you want.
+3. Set MPV as default video and audio player.
 
-Если система не запускается или входит в "безопасный режим", то:
-1. Выключаем компьютер
-2. При запуске зажимаем SHIFT
-3. Выбираем fedora из списка и нажимаем `e`
-4. В конце дописываем `single init=/bin/bash`
-5. Также заменяем `ro` на `rw`
-6. У вас могут не работать консольные команды, поэтому пишем `sudo su`, `/usr/bin/nano ~/fstab-copy`, копируем всё содержимое. `/usr/bin/nano /etc/fstab`, заменяем содержимое на то что скопировали.
-7. Сохраняем файл и пишем `sudo reboot -f -f`
-8. Система перезапуститься и должна начать работать.
+## Setting up the `fstab`
 
-## Первичная настройка
-Заходим в Установщик программ, он будет закреплён на вашем доке, и включаем сторонние репозитории.
+Here you need to be more careful. <b>Only do this if you have an ssd!</b>
 
-Ускоряем dnf:
-`sudo nano /etc/dnf/dnf.conf`
+First, make a copy of your fstab just in case. `cp /etc/fstab ~/fstab-copy`.
 
-- Добавляем это:
-```
-fastestmirror=True
-max_parallel_downloads=10
-defaultyes=True
-```
+Next open fstab: `sudo nano /etc/fstab` and put a line in our `,defaults,noatime,discard=async` and save the file and do `sudo reboot`
 
-- Дальше выполняем поочерёдно этот кусок:
-```
-sudo dnf autoremove
-sudo dnf clean all
-sudo dnf update
-```
+<img src="images/fstab.jpg" />
 
-- И перезагружаем пк:
-```
-sudo reboot
-```
+If the system does not start or enters "safe mode", then:
 
-Копируем этот репозиторий `git clone https://github.com/hoopengo/fedora-startup.git`, проверяем версию питона `python -V`, должна быть **3.10^**.
+1. Shut down the computer.
+2. Hold down SHIFT when starting up.
+3. Select fedora from the list and press `e`.
+4. At the end write `single init=/bin/bash`.
+5. Also replace `ro` with `rw`.
+6. You may not have console commands working, so write `sudo su`, `/usr/bin/nano ~/fstab-copy`, copy all the contents. `/usr/bin/nano /etc/fstab`, replace the contents with what you copied.
+7. Save the file and write `sudo reboot -f -f `.
+8. The system will restart and should now be up and running.
 
-Заходим в папочку `cd fedora-startup/`. Запускаем скрипт `python setup.py` и начинаем начальную установку, вы сами можете зайти в файл (`scripts/setup.sh`) и отредактировать его, удалив или добавив что-то. После установки, вам будет предложено перезагрузить систему и дабы не возникало ошибок, лучше это сделать.
+</details>
 
-После перезапуска снова запускаем скрипт и отказываемся от первичной установки. 
-
-## Дальше идут фиксы:
-1. Фикс звука - убирает назойливый bell. Убирает ограничение в 100% макс.звука и устанавливает шаг громкости *2*
-2. Фикс смены раскладки - заменяем super+space на alt+shift (что сделать вручную почему-то нельзя).
-3. Фикс скролла мыши - увеличит скролл мыши до 2, это можно изменить в `scripts/scroll-fix.sh` (Перед тем как фиксить скролл, запустите gnome-tweaks. Иначе он просто откажется работать в будущем)
-
-Также зайдём в Настройки > Клавиатура и добавим комбинацию клавиш для терминала (Ctr+Alt+T)
-
-<img src="sources/terminal.png" />
-
-## Nvidia
-После вам предложат установить nvidia драйвера. Если у вас не nvidia, то пропустите этот пункт, после установки система сразу перезапустится. Дальше при вводе пароля жмём на шестерёнку и выбираем gnome с xorg, чтобы система работала коректно. Всё готово.
-
-Также отмечу, что лучше установить вторую систему, к примеру на fedora xfce или windows именно для игр, где и установить проприетарные nvidia дрова. Я делаю именно так, потому-что у меня старая видюха, а если нужно поиграть или же монтировать видео, то переключаюсь на винду.
-
-## Игры
-Установка игровых штук. Среди которых:
-1. steam
-2. PortProton
-3. protonUP-QT
-
-Запустите steam и залогиньтесь. Дальше зайдите в ProtonUP-Qt и скачайте последнюю версию proton-ge (Дальше она появиться в compatibility в свойствах игры в стиме. Вы должны будете выбрать её). Также вы сможете запускать пиратские игры через lutris. И запускать другие лаунчеры через PortProton
-
-Отмечу также сайт [protondb](https://protondb.com), на нём можно узнать разные баги и что к ним приводит, а также параметры запуска.
-
-## Софт
-Самое долгое. Установка ВСЕГО софта.
-
-Flatpak:
-1. ExtensionManager
-2. VideoDownloader
-3. OBS
-4. Fragments
-5. Collision
-6. handbrake
-7. MetadataCleaner
-8. GPUViewer
-9. mpv
-10. dejadup (Backups)
-11. krita
-12. onlyoffice
-
-Snap:
-1. vscode
-2. pycharm community.ed
-3. telegram
-4. discord-canary
-
-## Устанавливаем "плагины"
-Заходим в менеджер расширений gnome (Extension Manager), если нету, то скачайте:
-
-`flatpak install flathub com.mattjakeman.ExtensionManager`
-
-Расширения:
-1. [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
-2. [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
-3. [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
-4. [Status area Horizontal Spacing](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
-5. [ArcMenu](https://extensions.gnome.org/extension/3628/arcmenu/) (Тут на выбор, это удобная вещь, но не для всех)
-
-Заходим в настройки arcmenu, Position выбираем right, включаем Show Activities Button. Также можете назначить свой hotkey и изменить много всего, тут уже на ваше усмотрение.
-
-## Настройки в gnome-tweaks
-Во вкладке Apperance(2) выбираем тему Adwaita-dark(5)
-
-Во вкладке Top Bar(6) в Clock выбираем все пункты (это позволит нам видить дату и секунды)
-
-Во вкладке Window Titlebars(7). Тыкаем на Maximize(4) и Minimize(5)
-
-Заходим в обычные настройки во вкладку Multitasking и выключаем Hot Corner (это первый пункт). Лично я оставляю этот пункт, но иногда он бесит.
-
-## Батарея
-Заходим в настройки батареи и выключаем всё что вас должно тревожить
-
-<img src="sources/battery-settings.png" />
-
-# Davinchi Resolve
-
-[href](https://drive.google.com/file/d/1jIaahhyufzlpEzoTSplfayifi6W7sKf6/view)
-
-Заходим в терминал, в директорию скачанного файла.
-```
-sudo chmod +x DaVinci_Resolve_17.4.1_Linux.run
-sudo ./DaVinci_Resolve_17.4.1_Linux.run
-```
-
-Готово!
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />

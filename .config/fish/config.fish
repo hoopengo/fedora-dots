@@ -10,20 +10,13 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias g git
 alias cls clear
 alias md mkdir
-alias vim nvim
-alias "gst" "git status"
-alias "gcm" "git commit"
-alias "ga" "git add"
-alias "gpl" "git pull"
-alias "gps" "git push"
 
-command -qv nvim && alias vim nvim
-
-set -gx EDITOR nvim
+command -qv nvim && set -gx EDITOR nvim
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+
+starship init fish | source
