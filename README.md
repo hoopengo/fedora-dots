@@ -76,14 +76,6 @@ I decided to put this in a separate item because it's the most important thing.
 
 10. If there are more disks, mark them with `ext4` and write `/mnt/{your_name}` at the mount point, for example I have `/mnt/TOSHIBA_1TB`
 
-# Customization
-
-```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
-
-1. Go to gnome-tweaks and set theme as [catppuccin-mocha](https://github.com/catppuccin/gtk/releases/).
-2. In Gnome Terminal, open Menu -> Profiles, and enable the profile for the theme you want.
-3. Set MPV as default video and audio player.
-
 ## Setting up the `fstab`
 
 Here you need to be more careful. <b>Only do this if you have an ssd!</b>
@@ -104,6 +96,14 @@ If the system does not start or enters "safe mode", then:
 6. You may not have console commands working, so write `sudo su`, `/usr/bin/nano ~/fstab-copy`, copy all the contents. `/usr/bin/nano /etc/fstab`, replace the contents with what you copied.
 7. Save the file and write `sudo reboot -f -f `.
 8. The system will restart and should now be up and running.
+# Customization
+
+```curl -sS https://github.com/hoopengo/fedora-dots/main/install.sh | sh```
+
+1. Go to gnome-tweaks and set theme as [catppuccin-mocha](https://github.com/catppuccin/gtk/releases/).
+2. In Gnome Terminal, open Menu -> Preferences -> Profiles, and enable the profile for the theme you want.
+3. Set MPV as default video and audio player.
+4. Replace your `/etc/dnf/dnf.conf` with `etc/dnf/dnf.conf` from this repository
 
 </details>
 

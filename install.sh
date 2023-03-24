@@ -20,19 +20,6 @@ if [ $USER == "root" ]; then
     exit
 fi
 
-# Set DNF configuration options
-echo "Setting DNF configuration options..."
-
-chmod 777 /etc/dnf/dnf.conf
-echo "[main]
-gpgcheck=True
-fastestmirror=True
-skip_if_unavailable=True
-clean_requirements_on_remove=True
-installonly_limit=10
-max_parallel_downloads=10
-defaultyes=True" >/etc/dnf/dnf.conf # set DNF configuration options
-
 # Install RPM Fusion repositories and update the system
 echo "Installing RPM Fusion repositories and updating the system..."
 sudo dnf install \
@@ -60,7 +47,9 @@ sudo dnf -y install \
     util-linux-user \
     inxi \
     ffmpeg \
-    wl-clipboard
+    wl-clipboard \
+    fzf \
+    golang
 
 # Clean up the system
 echo "Cleaning up the system..."
@@ -78,10 +67,33 @@ flatpak install -y \
     com.mattjakeman.ExtensionManager \
     io.mpv.Mpv
 
+# Installing omf
+if ! command -v omf >/dev/null 2>&1; then
+    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+fi
+
+# Installing rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Installing plugins
+omf install https://github.com/jhillyerd/plugin-git \
+    https://github.com/jorgebucaran/autopair.fish \
+    https://github.com/jorgebucaran/replay.fish \
+    https://github.com/meaningful-ooo/sponge \
+    https://github.com/nickeb96/puffer-fish \
+    https://github.com/acomagu/fish-async-prompt \
+    https://github.com/jethrokuan/z \
+    https://github.com/jorgebucaran/nvm.fish \
+    https://github.com/franciscolourenco/done \
+    https://github.com/danhper/fish-ssh-agent \
+    https://github.com/edc/bass
+
 # Change the user's shell to Fish and install Starship prompt
 echo "Changing user's shell to Fish and installing Starship prompt..."
-sudo chsh -s /usr/bin/fish $USER             # change user's shell to Fish
-curl -sS https://starship.rs/install.sh | sh # install Starship prompt
+sudo chsh -s /usr/bin/fish $USER # change user's shell to Fish
+if ! command -v starship >/dev/null 2>&1; then
+    curl -sS https://starship.rs/install.sh | sh # install Starship prompt
+fi
 
 # Configure GNOME settings
 echo "Configuring GNOME settings..."
