@@ -110,8 +110,11 @@ cd fedora-dots
 rsync -avxHAXP --exclude '.git*' .* ~/ # copy dotfiles to the user's home directory
 rm -rf fedora-dots                     # remove the cloned repository
 
-# configure gnome-terminal
+# Configure gnome-terminal
 curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
+
+# Installing AstroNvim
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 cd "$DIR"
 
