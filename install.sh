@@ -22,7 +22,7 @@ fi
 
 # Install RPM Fusion repositories and update the system
 echo "Installing RPM Fusion repositories and updating the system..."
-sudo dnf install \
+sudo dnf install -y \
     https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf update -y
