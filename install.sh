@@ -69,7 +69,8 @@ flatpak install -y \
 
 # Clone dotfiles repository and copy configuration files
 echo "Cloning dotfiles repository and copying configuration files..."
-git clone https://github.com/hoopengo/fedora-dots & # clone the repository in the background
+rm -rf ./fedora-dots
+git clone https://github.com/hoopengo/fedora-dots
 cd fedora-dots
 rsync -avxHAXP --exclude '.git*' .* ~/ # copy dotfiles to the user's home directory
 rm -rf fedora-dots                     # remove the cloned repository
