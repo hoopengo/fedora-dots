@@ -67,6 +67,13 @@ flatpak install -y \
     com.mattjakeman.ExtensionManager \
     io.mpv.Mpv
 
+# Clone dotfiles repository and copy configuration files
+echo "Cloning dotfiles repository and copying configuration files..."
+git clone https://github.com/hoopengo/fedora-dots & # clone the repository in the background
+cd fedora-dots
+rsync -avxHAXP --exclude '.git*' .* ~/ # copy dotfiles to the user's home directory
+rm -rf fedora-dots                     # remove the cloned repository
+
 # Installing omf
 if ! command -v omf >/dev/null 2>&1; then
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
@@ -102,13 +109,6 @@ gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true       
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source \[\'\<Alt\>Shift_L\'\]          # set input source switch keybinding
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward \[\'\<Shift\>Alt_L\'\] # set input source switch keybinding backwards
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 2                           # set volume step to 2
-
-# Clone dotfiles repository and copy configuration files
-echo "Cloning dotfiles repository and copying configuration files..."
-git clone https://github.com/hoopengo/fedora-dots & # clone the repository in the background
-cd fedora-dots
-rsync -avxHAXP --exclude '.git*' .* ~/ # copy dotfiles to the user's home directory
-rm -rf fedora-dots                     # remove the cloned repository
 
 # Configure gnome-terminal
 curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
